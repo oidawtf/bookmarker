@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xsd:element name="bookmarks">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="bookmark" type="bookmark" maxOccurs="unbounded" minOccurs="0" />
+	</xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name="bookmark">
+    <xsd:sequence>
+        <xsd:element name="title" type="xsd:string" />
+        <xsd:element name="url" type="xsd:string" />
+        <xsd:element name="created" type="xsd:date"/> 
+        <xsd:element name="labels" type="labels" />
+    </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="labels">
+    <xsd:sequence>
+        <xsd:element name="label" type="xsd:string" maxOccurs="unbounded" minOccurs="0" />
+    </xsd:sequence>
+</xsd:complexType>
+
+
+	
+</xsd:schema>
